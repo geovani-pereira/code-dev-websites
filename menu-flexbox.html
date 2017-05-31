@@ -1,0 +1,167 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Menu Flexbox</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<style>
+		/* Author: Alex; 
+			description: flexbox menu-top;
+		*/
+		.cabecalhoPrincipal .container {
+		    display: flex;
+		    align-items: center;
+		    justify-content: space-between;
+		}
+		.cabecalhoPrincipal-nav {
+		    display: flex;
+		}
+		.cabecalhoPrincipal-nav-link {
+			padding: 10px;
+			margin-bottom: 10px;
+			color: #9799A6;
+			background-color: #FFF;
+			text-decoration: none;
+			transition: .5s;
+			display: block;
+			border-bottom: 1px solid #9799A6;
+		}
+
+		.conteudoPrincipal {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.container {
+			width: 94%;
+			margin: 0 auto;
+		}
+
+		.cabecalhoPrincipal {
+			background-color: #FFF;
+			padding: 20px 0;
+		}
+
+		.cabecalhoPrincipal-titulo {
+			font-weight: bold;
+			font-size: 2em;
+			margin-bottom: 20px;
+		}
+
+		.cabecalhoPrincipal-titulo a {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		@media(min-width: 769px) {
+
+			.container {
+				width: 85%;	
+			}
+
+			.cabecalhoPrincipal-nav-link {
+				border-radius: 5px;
+				border: 1px solid #9799A6;
+			}
+
+			.cabecalhoPrincipal-nav-link:hover {
+				color: #FFF;
+				background-color: #9799A6;
+			}
+
+			.cabecalhoPrincipal-titulo {
+				margin: 0;
+			}
+
+			.cabecalhoPrincipal-nav {
+				width: auto;
+			}
+
+			.cabecalhoPrincipal-nav-link {
+				width: auto;
+				margin: 0 0 0 10px;
+			}
+
+
+			.conteudoPrincipal-cursos-link:nth-child(3n) {
+				margin-right: 0;
+			}
+
+			.conteudoPrincipal-cursos-link:nth-child(3n+1) {
+				margin-left: 0;
+			}
+
+		}
+
+		/* http://meyerweb.com/eric/tools/css/reset/ 
+		   v2.0 | 20110126
+		   License: none (public domain)
+		*/
+
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed, 
+		figure, figcaption, footer, header, hgroup, 
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure, 
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+	</style>
+
+</head>
+<body>
+	<header class="cabecalhoPrincipal">
+		<div class="container">
+			<h1 class="cabecalhoPrincipal-titulo">
+				<a href="#">Logo</a>
+			</h1>
+
+			<nav class="cabecalhoPrincipal-nav">
+				<a class="cabecalhoPrincipal-nav-link" href="#">Home</a>
+				<a class="cabecalhoPrincipal-nav-link" href="#">Menu 1</a>
+				<a class="cabecalhoPrincipal-nav-link" href="#">Menu 2</a>
+				<a class="cabecalhoPrincipal-nav-link" href="#">Menu 3</a>
+				<a class="cabecalhoPrincipal-nav-link cabecalhoPrincipal-nav-link-app" href="#">Nosso APP</a>
+			</nav>
+		</div>
+	</header>
+</body>
+</html>
