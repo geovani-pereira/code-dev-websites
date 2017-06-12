@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Block Scroll Map</title>
+
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<style>
+		.map-container {
+	width: 100%;
+	margin: 50px 0 3000px;
+	}
+	.map-container iframe{
+		width: 100%;
+		display: block;
+		pointer-events: none;
+		position: relative; /* IE needs a position other than static */
+	}
+	.map-container iframe.clicked{
+		pointer-events: auto;
+	}
+	</style>
+
+	<script>
+		$('.map-container')
+			.click(function(){
+					$(this).find('iframe').addClass('clicked')})
+			.mouseleave(function(){
+					$(this).find('iframe').removeClass('clicked')});
+	</script>
+</head>
+<body>
+	<div class="map-container">
+		<iframe width="300" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?q=Status201%20Web%20Development&amp;key=AIzaSyCCGx7iveK21dme8OuLgX9Je7TUDDCw3_A"></iframe>
+	</div>
+</body>
+</html>
