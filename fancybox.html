@@ -14,9 +14,11 @@
 </head>
 <body>
 
-	<a href="https://amazingslider.com/wp-content/uploads/2012/12/dandelion.jpg" data-fancybox="gallery">
-		<img src="https://amazingslider.com/wp-content/uploads/2012/12/dandelion.jpg" width="350" height="233">
-	</a>
+	<div class="fancybox" class="ui-content" data-role="popup" id="popupVideo" data-overlay-theme="b" data-theme="a" id='popupbox'>
+
+            <iframe id="close" src="<?php echo $this->basePath('videos/videos-index2.mp4') ?>" width="697" height="398"></iframe>
+
+    </div>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
