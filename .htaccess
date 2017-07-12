@@ -1,0 +1,4 @@
+RewriteEngine on
+
+//redirecionar URL para um novo site
+RewriteRule ^(.*)$ http://novoDomonio.com.br [R=permanent,L]
