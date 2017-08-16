@@ -1,0 +1,55 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Integração Instagram</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+        //Get token here -> http://instagram.pixelunion.net/
+        //Get ID here -> https://smashballoon.com/instagram-feed/find-instagram-user-id/
+
+        var user_id = '3145629352';
+        var token = '3145629352.1677ed0.adba1ee8c763468b81aa948efdcaf7d6';
+
+
+        var url = 'https://api.instagram.com/v1/users/'+user_id+'/media/recent/?access_token='+token;
+
+        $.ajax({
+          type: 'POST',
+          dataType: 'jsonp',
+          url: url
+        }).done(function(response) {
+          var classe;
+          $.each(response.data, function(index, value) {
+            if (index > 20) return false;
+            var url_image = value.link;
+            
+            var html = '\
+              <div class=\"col-md-3 instagram\">\
+                <a href=\"'+value.link+'\" target=\"_blank\" class=\"img-instagram--block\">\
+                  <img src=\"'+value.images.low_resolution.url+'\" title=\"'+value.caption.text+'\"\
+                  class=\"img-instagram\"/>\
+                </a>\
+              </div>\
+            ';
+                    
+            $('#iframe-instagram').append(html);
+          });
+        });
+    </script>
+
+    <style>
+    	.instagram {
+		  	padding-top: 20px;
+		  	padding-left: 10px;
+		}
+		.instagram img {
+			width: 260px;
+			height: auto;
+		}
+    </style>
+</head>
+<body>
+	<div id="iframe-instagram"></div>
+</body>
+</html>
